@@ -2,4 +2,5 @@
 2 - SELECT `status` , SUM(price) FROM `pagamenti` GROUP BY `status`;
 3 - SELECT `stanza_id` , COUNT(*) FROM `prenotazioni` GROUP BY `stanza_id`;
 4 - SELECT HOUR(created_at) , COUNT(HOUR(created_at)) FROM `prenotazioni` GROUP BY HOUR(created_at) ORDER BY COUNT(HOUR(created_at)) DESC
+   COUNT(HOUR(created_at)) ---> count(`id`)
 5 - 
