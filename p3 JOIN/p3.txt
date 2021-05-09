@@ -1,0 +1,4 @@
+1 - SELECT `ospiti`.`name` , `ospiti` . `lastname` FROM `ospiti` INNER JOIN `prenotazioni_has_ospiti` ON `ospiti`.`id` = `ospite_id` GROUP BY `ospite_id` HAVING COUNT(*) > 2;
+2 - SELECT `ospiti`.`name` , `ospiti` . `lastname` FROM `ospiti` INNER JOIN `prenotazioni_has_ospiti` ON `ospiti`.`id` = `ospite_id`;
+3 - SELECT `paganti`.`name` , `paganti` . `lastname` , `pagamenti` . `price` FROM `pagamenti` INNER JOIN `paganti` ON `pagamenti`.`pagante_id` = `paganti`.`id` INNER JOIN `prenotazioni` ON `prenotazioni`.`id` = `prenotazione_id` WHERE `prenotazioni` . `created_at` LIKE '2018-05%';
+4 - SELECT SUM(pagamenti.price) AS somma FROM `pagamenti`, `stanze` , `prenotazioni` WHERE `stanze`.`id`= `prenotazioni`.`stanza_id` AND `pagamenti`.`prenotazione_id` = `prenotazioni`.`id` AND `stanze`.`floor` = 1;
