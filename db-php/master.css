@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div#root{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: lightgrey;
+}
+
+table.main_table{
+  width: 50vh;
+  height: 50vw;
+}
+
+table tr td{
+  text-align: center;
+  border: 1px solid black;
+}
+
+.room_selected{
+  padding: 20px;
+  background-color: white;
+  width: 300px;
+  height: 110px;
+  margin-left: 20px;
+}
+
+.hover-infos{
+  display: none;
+}
+
+.hover-infos.active{
+  display: block;
+}
