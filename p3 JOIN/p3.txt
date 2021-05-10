@@ -2,3 +2,5 @@
 2 - SELECT `ospiti`.`name` , `ospiti` . `lastname` FROM `ospiti` INNER JOIN `prenotazioni_has_ospiti` ON `ospiti`.`id` = `ospite_id`;
 3 - SELECT `paganti`.`name` , `paganti` . `lastname` , `pagamenti` . `price` FROM `pagamenti` INNER JOIN `paganti` ON `pagamenti`.`pagante_id` = `paganti`.`id` INNER JOIN `prenotazioni` ON `prenotazioni`.`id` = `prenotazione_id` WHERE `prenotazioni` . `created_at` LIKE '2018-05%';
 4 - SELECT SUM(pagamenti.price) AS somma FROM `pagamenti`, `stanze` , `prenotazioni` WHERE `stanze`.`id`= `prenotazioni`.`stanza_id` AND `pagamenti`.`prenotazione_id` = `prenotazioni`.`id` AND `stanze`.`floor` = 1;
+5 - SELECT * FROM pagamenti INNER JOIN paganti ON pagamenti.pagante_id = paganti.id WHERE pagamenti.prenotazione_id=7;
+6 - SELECT stanze.room_number, prenotazioni.* FROM stanze LEFT JOIN prenotazioni ON prenotazioni.stanza_id = stanze.id WHERE prenotazioni.id IS NULL
