@@ -3,7 +3,7 @@ var app= new Vue({
   data:{
     rooms: [],
     selected_room: [],
-    roomSel: false,
+    guests: [],
   },
   methods: {
     IDroom: function(id) {
@@ -13,18 +13,17 @@ var app= new Vue({
           });
     },
     showInfos: function(id) {
-      axios.get('http://localhost/db-hotel/db-php/api/stanze.php?id='+id)
-          .then((response) => {
-            this.selected_room = response.data.response[0];
-          });
-          this.roomSel = true;
-    }
+      // axios.get('http://localhost/db-hotel/db-php/api/stanze.php?id='+id)
+      //     .then((response) => {
+      //       // this.selected_room = response.data.response[0];
+      //     });
+      //     this.roomSel = true;
+    },
   },
-
   mounted() {
     axios.get('http://localhost/db-hotel/db-php/api/stanze.php')
         .then((response) => {
           this.rooms = response.data.response;
         });
-  }
+  },
 });

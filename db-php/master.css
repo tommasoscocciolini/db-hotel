@@ -15,13 +15,24 @@ div#root{
 }
 
 table.main_table{
-  width: 50vh;
-  height: 50vw;
+  height: 50vh;
+  width: 25vw;
 }
 
-table tr td{
+.main_table thead{
+  background-color: white;
+}
+
+table.main_table tr td{
   text-align: center;
   border: 1px solid black;
+}
+
+table.main_table tr td.room-number:hover{
+  text-align: center;
+  border: 1px solid black;
+  background-color: lightyellow;
+  cursor: pointer;
 }
 
 .room_selected{
@@ -32,10 +43,10 @@ table tr td{
   margin-left: 20px;
 }
 
-.hover-infos{
-  display: none;
-}
-
-.hover-infos.active{
-  display: block;
+button.showguests{
+  padding: 5px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-top: 10px;
 }
